@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Question } from '../models/Question';
+import { MockData, ModelToPost } from './../models/Question';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,13 @@ export class CrudService {
 
   deleteQuestion(id) {
     return this.http.delete(`${this.baseUrl}questions/${id}`);
+  }
+
+  getMockData(): Observable<MockData> {
+    return this.http.get<MockData>(`${this.baseUrl}data`);
+  }
+
+  postToDummyServer(modelData: ModelToPost) {
+    return of(modelData);
   }
 }

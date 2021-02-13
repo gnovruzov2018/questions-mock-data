@@ -12,6 +12,7 @@ import { AlertifyService } from './services/alertify.service';
 import { CrudService } from './services/crud.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TestDataComponent } from './test-data/test-data.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    TestDataComponent
   ],
   imports: [
     BrowserModule,

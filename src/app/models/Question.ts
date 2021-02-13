@@ -1,4 +1,4 @@
-export class ContentData{
+export class MockData{
     htmlContent: string;
     questions: Question[];
 }
@@ -6,4 +6,9 @@ export class ContentData{
 export class Question {
     id: number;
     text: string;
+}
+
+export class ModelToPost {
+    questionId: number;
+    htmlContent: string;
 }
